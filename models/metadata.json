@@ -1,0 +1,49 @@
+{
+  "project": "DispatchIQ",
+  "author": "Pankaj Raikar",
+  "version": "1.0.0",
+  "trained_at": "2026-10-05T06:31:53.738789+00:00",
+  "algorithm": "XGBoost Regressor (Gradient Boosted Trees)",
+  "hyperparameters": {
+    "n_estimators": 500,
+    "max_depth": 8,
+    "learning_rate": 0.01,
+    "subsample": 0.9,
+    "colsample_bytree": 1.0,
+    "reg_alpha": 0.0,
+    "reg_lambda": 2.0,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "features": [
+    "Delivery_person_Age",
+    "Delivery_person_Ratings",
+    "distance_km",
+    "order_hour",
+    "Road_traffic_density",
+    "Vehicle_condition",
+    "multiple_deliveries",
+    "Type_of_order_Drinks",
+    "Type_of_order_Meal",
+    "Type_of_order_Snack",
+    "Type_of_vehicle_electric_scooter",
+    "Type_of_vehicle_motorcycle",
+    "Type_of_vehicle_scooter",
+    "Festival_Yes",
+    "City_Semi-Urban",
+    "City_Urban",
+    "Weatherconditions_Fog",
+    "Weatherconditions_Sandstorms",
+    "Weatherconditions_Stormy",
+    "Weatherconditions_Sunny",
+    "Weatherconditions_Windy"
+  ],
+  "metrics": {
+    "r2_score": 0.8287,
+    "adjusted_r2": 0.8283,
+    "rmse_minutes": 3.9176,
+    "mae_minutes": 3.1212,
+    "test_sample_count": 9033,
+    "feature_count": 21
+  }
+}
