@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=65.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dispatch-iq"
+version = "1.0.0"
+description = "Intelligent last-mile delivery ETA prediction engine and REST microservice."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Pankaj Raikar", email = "pankajraikar6@gmail.com" }
+]
+keywords = [
+    "machine-learning",
+    "delivery-prediction",
+    "eta-estimation",
+    "xgboost",
+    "fastapi",
+    "haversine-distance",
+    "logistics-ai"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.22.0",
+    "pandas>=1.4.0",
+    "scikit-learn>=1.1.0",
+    "xgboost>=1.6.0",
+    "joblib>=1.1.0",
+    "fastapi>=0.95.0",
+    "pydantic>=2.0.0",
+    "uvicorn>=0.20.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "matplotlib>=3.5.0",
+    "seaborn>=0.11.0",
+    "httpx>=0.24.0",
+    "ruff>=0.1.0"
+]
+
+[project.scripts]
+dispatch-iq = "dispatch_iq.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["dispatch_iq*", "scripts*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
